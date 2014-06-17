@@ -358,23 +358,23 @@ UsedLibrary="/Applications/EAGLE-6.5.0/lbr/xilinx-xc9.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/xilinx-xcv.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/zetex.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/zilog.lbr"
-UsedLibrary="/Users/timv/Google Drive/OpenLRS URX/lbr/RFM23.lbr"
-UsedLibrary="/Users/timv/Google Drive/OpenLRS URX/lbr/con-coax.lbr"
-UsedLibrary="/Users/timv/Google Drive/OpenLRS URX/lbr/con-hirose-df13.lbr"
-UsedLibrary="/Users/timv/Google Drive/OpenLRS URX/lbr/crystal_3225.lbr"
-UsedLibrary="/Users/timv/Google Drive/OpenLRS URX/lbr/diode.lbr"
-UsedLibrary="/Users/timv/Google Drive/OpenLRS URX/lbr/inductors.lbr"
-UsedLibrary="/Users/timv/Google Drive/OpenLRS URX/lbr/led.lbr"
-UsedLibrary="/Users/timv/Google Drive/OpenLRS URX/lbr/linear.lbr"
-UsedLibrary="/Users/timv/Google Drive/OpenLRS URX/lbr/ltc_swr.lbr"
-UsedLibrary="/Users/timv/Google Drive/OpenLRS URX/lbr/minicircuits.lbr"
+UsedLibrary="/Users/timv/OpenLRS-APM/lbr/RFM23.lbr"
+UsedLibrary="/Users/timv/OpenLRS-APM/lbr/con-coax.lbr"
+UsedLibrary="/Users/timv/OpenLRS-APM/lbr/con-hirose-df13.lbr"
+UsedLibrary="/Users/timv/OpenLRS-APM/lbr/crystal_3225.lbr"
+UsedLibrary="/Users/timv/OpenLRS-APM/lbr/diode.lbr"
+UsedLibrary="/Users/timv/OpenLRS-APM/lbr/inductors.lbr"
+UsedLibrary="/Users/timv/OpenLRS-APM/lbr/led.lbr"
+UsedLibrary="/Users/timv/OpenLRS-APM/lbr/linear.lbr"
+UsedLibrary="/Users/timv/OpenLRS-APM/lbr/ltc_swr.lbr"
+UsedLibrary="/Users/timv/OpenLRS-APM/lbr/minicircuits.lbr"
 
 [Win_1]
 Type="Schematic Editor"
 Loc="340 208 939 607"
 State=0
 Number=2
-File="openLRSngTX.sch"
+File="openLRS-APM.sch"
 View="-30.7648 15.2485 182.494 116.07"
 WireWidths=" 0 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
@@ -418,8 +418,8 @@ Sheet=1
 
 [Win_2]
 Type="Control Panel"
-Loc="422 250 1021 649"
-State=1
+Loc="340 208 939 607"
+State=2
 Number=0
 
 [Desktop]
