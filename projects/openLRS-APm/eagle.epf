@@ -371,11 +371,11 @@ UsedLibrary="/Users/timv/OpenLRS-APM/lbr/minicircuits.lbr"
 
 [Win_1]
 Type="Schematic Editor"
-Loc="340 208 939 607"
+Loc="214 22 1573 704"
 State=0
 Number=2
 File="openLRS-APM.sch"
-View="-30.7648 15.2485 182.494 116.07"
+View="-44.2523 13.5333 262.84 158.716"
 WireWidths=" 0 0.3048 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0.4064 0.1524"
 PadDiameters=" 0.254 0.3048 0.4064 0.6096 0.8128 1.016 1.27 1.4224 1.6764 1.778 1.9304 2.1844 2.54 3.81 6.4516 0"
 PadDrills=" 0.5 0.6 0.7 0.9 1 1.1 1.2 1.3 1.4 1.5 1.6 2 2.2 2.8 3.2 0.8"
@@ -414,6 +414,7 @@ ArcDirection=0
 AddLevel=2
 PadsSameType=0
 Layer=91
+Views=" 1: -44.2523 13.5333 262.84 158.716"
 Sheet=1
 
 [Win_2]

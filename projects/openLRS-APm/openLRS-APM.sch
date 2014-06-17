@@ -2203,7 +2203,6 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 <description>&lt;b&gt;SMA 50 Ohm&lt;/b&gt; Board Thickness &lt;b&gt;0.062&lt;/b&gt; Inch, End Launch Jack Receptacle&lt;p&gt;
 Johnson Components&lt;br&gt;
 Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
-<wire x1="0" y1="5.588" x2="0" y2="-5.588" width="0" layer="20"/>
 <wire x1="-1.55" y1="-4.65" x2="-1.55" y2="-2" width="0.2032" layer="21"/>
 <wire x1="-1.55" y1="-2" x2="-3.7" y2="-2" width="0.2032" layer="21"/>
 <wire x1="-3.7" y1="-2" x2="-4.45" y2="-2.75" width="0.2032" layer="21"/>
@@ -2933,8 +2932,8 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 <part name="C2" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="100n"/>
 <part name="TELEMETRY" library="con-hirose-df13" deviceset="DF13-6P-1.25" device="H"/>
 <part name="X2" library="con-coax" deviceset="SMA-" device="142-0711-821/826" value="SMA-142-0711-821/826"/>
-<part name="ICP" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254" value=""/>
-<part name="VCC" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254" value=""/>
+<part name="PPM" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254" value=""/>
+<part name="5V" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254" value=""/>
 <part name="GND" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254" value=""/>
 </parts>
 <sheets>
@@ -2972,10 +2971,10 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 <instance part="C2" gate="G$1" x="22.86" y="43.18"/>
 <instance part="TELEMETRY" gate="G$1" x="-10.16" y="104.14" rot="MR0"/>
 <instance part="X2" gate="G1" x="175.26" y="93.98" rot="MR0"/>
-<instance part="ICP" gate="G$1" x="-7.62" y="55.88" smashed="yes">
+<instance part="PPM" gate="G$1" x="-7.62" y="55.88" smashed="yes">
 <attribute name="VALUE" x="-8.763" y="52.578" size="1.778" layer="96"/>
 </instance>
-<instance part="VCC" gate="G$1" x="-7.62" y="53.34" smashed="yes">
+<instance part="5V" gate="G$1" x="-7.62" y="53.34" smashed="yes">
 <attribute name="VALUE" x="-8.763" y="50.038" size="1.778" layer="96"/>
 </instance>
 <instance part="GND" gate="G$1" x="-7.62" y="50.8" smashed="yes">
@@ -2986,16 +2985,6 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 </busses>
 <nets>
 <net name="GND" class="0">
-<segment>
-<wire x1="-5.08" y1="106.68" x2="-2.54" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="106.68" x2="-2.54" y2="109.22" width="0.1524" layer="91"/>
-<wire x1="-2.54" y1="109.22" x2="-5.08" y2="109.22" width="0.1524" layer="91"/>
-<label x="2.54" y="109.22" size="1.778" layer="95"/>
-<junction x="-2.54" y="109.22"/>
-<wire x1="-2.54" y1="109.22" x2="2.54" y2="109.22" width="0.1524" layer="91"/>
-<pinref part="TELEMETRY" gate="G$1" pin="1"/>
-<pinref part="TELEMETRY" gate="G$1" pin="2"/>
-</segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="6"/>
 <wire x1="15.24" y1="27.94" x2="20.32" y2="27.94" width="0.1524" layer="91"/>
@@ -3080,13 +3069,16 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 <wire x1="-5.08" y1="50.8" x2="-2.54" y2="50.8" width="0.1524" layer="91"/>
 <label x="-2.54" y="50.8" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="TELEMETRY" gate="G$1" pin="6"/>
+<wire x1="-5.08" y1="96.52" x2="2.54" y2="96.52" width="0.1524" layer="91"/>
+<label x="2.54" y="96.52" size="1.778" layer="95"/>
+<pinref part="TELEMETRY" gate="G$1" pin="5"/>
+<wire x1="-5.08" y1="99.06" x2="2.54" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="2.54" y1="99.06" x2="2.54" y2="96.52" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="VCC" class="0">
-<segment>
-<wire x1="-5.08" y1="104.14" x2="2.54" y2="104.14" width="0.1524" layer="91"/>
-<label x="2.54" y="104.14" size="1.778" layer="95"/>
-<pinref part="TELEMETRY" gate="G$1" pin="3"/>
-</segment>
 <segment>
 <pinref part="SUPPLY1" gate="1" pin="VCC"/>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -3136,45 +3128,50 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 <wire x1="106.68" y1="68.58" x2="106.68" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="VCC" gate="G$1" pin="P"/>
+<pinref part="5V" gate="G$1" pin="P"/>
 <wire x1="-5.08" y1="53.34" x2="-2.54" y2="53.34" width="0.1524" layer="91"/>
 <label x="-2.54" y="53.34" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="TELEMETRY" gate="G$1" pin="1"/>
+<wire x1="-5.08" y1="109.22" x2="2.54" y2="109.22" width="0.1524" layer="91"/>
+<label x="2.54" y="109.22" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="RXD" class="0">
-<segment>
-<wire x1="-5.08" y1="101.6" x2="2.54" y2="101.6" width="0.1524" layer="91"/>
-<label x="2.54" y="101.6" size="1.778" layer="95"/>
-<pinref part="TELEMETRY" gate="G$1" pin="4"/>
-</segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PD0(RXD)"/>
 <wire x1="91.44" y1="68.58" x2="93.98" y2="68.58" width="0.1524" layer="91"/>
 <label x="93.98" y="68.58" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="TELEMETRY" gate="G$1" pin="2"/>
+<wire x1="-5.08" y1="106.68" x2="2.54" y2="106.68" width="0.1524" layer="91"/>
+<label x="2.54" y="106.68" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="TXD" class="0">
-<segment>
-<wire x1="-5.08" y1="99.06" x2="2.54" y2="99.06" width="0.1524" layer="91"/>
-<label x="2.54" y="99.06" size="1.778" layer="95"/>
-<pinref part="TELEMETRY" gate="G$1" pin="5"/>
-</segment>
 <segment>
 <pinref part="U1" gate="G$1" pin="PD1(TXD)"/>
 <wire x1="91.44" y1="66.04" x2="93.98" y2="66.04" width="0.1524" layer="91"/>
 <label x="93.98" y="66.04" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="TELEMETRY" gate="G$1" pin="3"/>
+<wire x1="-5.08" y1="104.14" x2="2.54" y2="104.14" width="0.1524" layer="91"/>
+<label x="2.54" y="104.14" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="DTR" class="0">
-<segment>
-<wire x1="-5.08" y1="96.52" x2="2.54" y2="96.52" width="0.1524" layer="91"/>
-<label x="2.54" y="96.52" size="1.778" layer="95"/>
-<pinref part="TELEMETRY" gate="G$1" pin="6"/>
-</segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
 <wire x1="22.86" y1="91.44" x2="20.32" y2="91.44" width="0.1524" layer="91"/>
 <label x="15.24" y="91.44" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="TELEMETRY" gate="G$1" pin="4"/>
+<wire x1="-5.08" y1="101.6" x2="2.54" y2="101.6" width="0.1524" layer="91"/>
+<label x="2.54" y="101.6" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="/RESET" class="0">
@@ -3191,20 +3188,6 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 <pinref part="J1" gate="G$1" pin="5"/>
 <wire x1="-2.54" y1="27.94" x2="-7.62" y2="27.94" width="0.1524" layer="91"/>
 <label x="-17.78" y="27.94" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SDA" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PC4(ADC4/SDA)"/>
-<wire x1="91.44" y1="81.28" x2="96.52" y2="81.28" width="0.1524" layer="91"/>
-<label x="96.52" y="81.28" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="SCL" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PC5(ADC5/SCL)"/>
-<wire x1="91.44" y1="78.74" x2="96.52" y2="78.74" width="0.1524" layer="91"/>
-<label x="96.52" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -3274,18 +3257,6 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 <wire x1="170.18" y1="78.74" x2="170.18" y2="68.58" width="0.1524" layer="91"/>
 <pinref part="IC2" gate="G$1" pin="GPIO1"/>
 <wire x1="170.18" y1="68.58" x2="165.1" y2="68.58" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="ICP" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PB0(ICP)"/>
-<wire x1="91.44" y1="45.72" x2="93.98" y2="45.72" width="0.1524" layer="91"/>
-<label x="93.98" y="45.72" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="ICP" gate="G$1" pin="P"/>
-<wire x1="-5.08" y1="55.88" x2="-2.54" y2="55.88" width="0.1524" layer="91"/>
-<label x="-2.54" y="55.88" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="RF_IRQ" class="0">
@@ -3379,13 +3350,6 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 <wire x1="106.68" y1="35.56" x2="106.68" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="VCN" class="0">
-<segment>
-<pinref part="U1" gate="G$1" pin="PD7(AIN1)"/>
-<wire x1="91.44" y1="50.8" x2="93.98" y2="50.8" width="0.1524" layer="91"/>
-<label x="93.98" y="50.8" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="SDN" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="SDN"/>
@@ -3396,6 +3360,18 @@ Source: www.johnsoncomponents.com .. J502-ND.pdf</description>
 <pinref part="U1" gate="G$1" pin="PB1(OC1A)"/>
 <wire x1="91.44" y1="43.18" x2="93.98" y2="43.18" width="0.1524" layer="91"/>
 <label x="93.98" y="43.18" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="PPM" class="0">
+<segment>
+<pinref part="PPM" gate="G$1" pin="P"/>
+<wire x1="-5.08" y1="55.88" x2="-2.54" y2="55.88" width="0.1524" layer="91"/>
+<label x="-2.54" y="55.88" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U1" gate="G$1" pin="PB0(ICP)"/>
+<wire x1="91.44" y1="45.72" x2="93.98" y2="45.72" width="0.1524" layer="91"/>
+<label x="93.98" y="45.72" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
