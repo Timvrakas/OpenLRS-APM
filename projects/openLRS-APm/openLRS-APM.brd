@@ -4480,10 +4480,8 @@ design rules under a new name.</description>
 </signal>
 <signal name="SDN">
 <contactref element="IC2" pad="15"/>
-<contactref element="U1" pad="13"/>
 <via x="14.097" y="14.732" extent="1-16" drill="0.6"/>
-<wire x1="13.9954" y1="10.141" x2="15.113" y2="10.141" width="0.4064" layer="1"/>
-<wire x1="15.113" y1="10.141" x2="15.113" y2="13.716" width="0.4064" layer="1"/>
+<wire x1="15.113" y1="11.741" x2="15.113" y2="13.716" width="0.4064" layer="1"/>
 <wire x1="15.113" y1="13.716" x2="14.097" y2="14.732" width="0.4064" layer="1"/>
 <wire x1="14.097" y1="14.732" x2="14.097" y2="12.446" width="0.4064" layer="16"/>
 <wire x1="14.097" y1="12.446" x2="4.064" y2="12.446" width="0.4064" layer="16"/>
@@ -4492,20 +4490,24 @@ design rules under a new name.</description>
 <wire x1="1.415" y1="14.732" x2="1.415" y2="14.906" width="0.4064" layer="16"/>
 <wire x1="2.921" y1="13.843" x2="2.921" y2="14.906" width="0.4064" layer="16"/>
 <wire x1="2.921" y1="14.906" x2="1.415" y2="14.906" width="0.4064" layer="16"/>
+<contactref element="U1" pad="11"/>
+<wire x1="13.9954" y1="11.741" x2="15.113" y2="11.741" width="0.4064" layer="1"/>
 </signal>
 <signal name="PPM">
 <contactref element="PPM" pad="1"/>
-<contactref element="U1" pad="12"/>
 <wire x1="5.207" y1="3.81" x2="6.223" y2="4.826" width="0.4064" layer="1"/>
 <via x="6.223" y="4.826" extent="1-16" drill="0.6"/>
 <wire x1="6.223" y1="4.826" x2="6.223" y2="8.255" width="0.4064" layer="16"/>
 <wire x1="6.223" y1="8.255" x2="10.414" y2="8.255" width="0.4064" layer="16"/>
 <via x="10.414" y="8.255" extent="1-16" drill="0.6"/>
-<wire x1="10.414" y1="8.255" x2="10.414" y2="9.525" width="0.4064" layer="1"/>
-<wire x1="10.414" y1="9.525" x2="13.081" y2="10.922" width="0.4064" layer="1"/>
-<wire x1="13.081" y1="10.922" x2="13.9764" y2="10.922" width="0.4064" layer="1"/>
-<wire x1="13.9764" y1="10.922" x2="13.9954" y2="10.941" width="0.4064" layer="1"/>
 <wire x1="5.207" y1="3.81" x2="5.207" y2="1.905" width="0.4064" layer="1"/>
+<contactref element="U1" pad="13"/>
+<wire x1="10.414" y1="8.255" x2="11.557" y2="9.398" width="0.4064" layer="1"/>
+<wire x1="11.557" y1="9.398" x2="11.557" y2="10.287" width="0.4064" layer="1"/>
+<wire x1="13.9954" y1="10.141" x2="13.227" y2="10.141" width="0.4064" layer="1"/>
+<wire x1="13.227" y1="10.141" x2="12.827" y2="10.541" width="0.4064" layer="1"/>
+<wire x1="12.827" y1="10.541" x2="11.811" y2="10.541" width="0.4064" layer="1"/>
+<wire x1="11.811" y1="10.541" x2="11.557" y2="10.287" width="0.4064" layer="1"/>
 </signal>
 </signals>
 <errors>
@@ -4528,8 +4530,8 @@ design rules under a new name.</description>
 <approved hash="4,16,0fa5a912d7eeb712"/>
 <approved hash="4,16,ad4a295dd7afd1fe"/>
 <approved hash="4,16,12f148d5946ca6a1"/>
-<approved hash="4,1,7faab96a526fecc2"/>
 <approved hash="4,1,56f4b89251e7f634"/>
+<approved hash="4,1,7faab96a526fecc2"/>
 <approved hash="4,16,7faab96a526fecc2"/>
 <approved hash="4,16,56f4b89251e7f634"/>
 <approved hash="4,16,a38efb1ed3ebe079"/>
