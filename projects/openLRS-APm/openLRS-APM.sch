@@ -4393,6 +4393,9 @@ Source: www.kingbright.com</description>
 <pinref part="U1" gate="G$1" pin="PB1(OC1A)"/>
 <wire x1="91.44" y1="43.18" x2="93.98" y2="43.18" width="0.1524" layer="91"/>
 <label x="93.98" y="43.18" size="1.778" layer="95"/>
+<pinref part="U1" gate="G$1" pin="PB0(ICP)"/>
+<wire x1="93.98" y1="43.18" x2="93.98" y2="45.72" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="45.72" x2="91.44" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
