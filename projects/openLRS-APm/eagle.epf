@@ -18,6 +18,7 @@ UsedLibrary="/Applications/EAGLE-6.5.0/lbr/74xx-little-de.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/74xx-little-us.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/74xx-us.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/751xx.lbr"
+UsedLibrary="/Applications/EAGLE-6.5.0/lbr/LCD Connectors.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/LilyPad-Wearables.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/SparkFun-Aesthetics.lbr"
 UsedLibrary="/Applications/EAGLE-6.5.0/lbr/SparkFun-AnalogIC.lbr"
@@ -373,7 +374,7 @@ UsedLibrary="/Users/timv/OpenLRS-APM/lbr/minicircuits.lbr"
 
 [Win_1]
 Type="Control Panel"
-Loc="435 228 1034 627"
+Loc="335 84 1268 480"
 State=2
 Number=0
 
