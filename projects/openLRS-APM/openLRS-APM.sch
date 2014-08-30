@@ -1417,12 +1417,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 <packages>
 </packages>
 <symbols>
-<symbol name="VCC2">
-<wire x1="0.762" y1="1.27" x2="0" y2="2.54" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="-0.762" y2="1.27" width="0.254" layer="94"/>
-<text x="-1.016" y="3.556" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="VCC" x="0" y="0" visible="off" length="short" direction="sup" rot="R90"/>
-</symbol>
 <symbol name="DGND">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
@@ -1430,19 +1424,6 @@ We've spent an enormous amount of time creating and checking these footprints an
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="VCC" prefix="SUPPLY">
-<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
-<gates>
-<gate name="1" symbol="VCC2" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="GND" prefix="GND">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
@@ -4030,7 +4011,6 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <part name="GND1" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND2" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="GND4" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="SUPPLY4" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="C3" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="12pF"/>
 <part name="C4" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="12pF"/>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
@@ -4039,10 +4019,8 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <part name="C9" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="1uF"/>
 <part name="C10" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="100n"/>
 <part name="R8" library="SparkFun-Resistors" deviceset="RESISTOR" device="0805-RES" value="1k"/>
-<part name="SUPPLY5" library="SparkFun-Aesthetics" deviceset="VCC" device=""/>
 <part name="C6" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="100n"/>
 <part name="GND7" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
-<part name="C2" library="SparkFun-Capacitors" deviceset="CAP" device="0805" value="100n"/>
 <part name="TELEMETRY" library="con-hirose-df13" deviceset="DF13-6P-1.25" device="H"/>
 <part name="PPM" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254" value=""/>
 <part name="VCC" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254" value=""/>
@@ -4071,7 +4049,6 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <instance part="GND1" gate="1" x="137.16" y="58.42"/>
 <instance part="GND2" gate="1" x="38.1" y="25.4"/>
 <instance part="GND4" gate="1" x="111.76" y="20.32"/>
-<instance part="SUPPLY4" gate="1" x="30.48" y="50.8"/>
 <instance part="C3" gate="G$1" x="25.4" y="66.04" rot="R270"/>
 <instance part="C4" gate="G$1" x="25.4" y="60.96" rot="R270"/>
 <instance part="GND5" gate="1" x="40.64" y="53.34"/>
@@ -4080,10 +4057,8 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <instance part="C9" gate="G$1" x="121.92" y="96.52"/>
 <instance part="C10" gate="G$1" x="129.54" y="96.52"/>
 <instance part="R8" gate="G$1" x="106.68" y="63.5" rot="R90"/>
-<instance part="SUPPLY5" gate="1" x="106.68" y="71.12"/>
 <instance part="C6" gate="G$1" x="30.48" y="76.2" rot="R90"/>
 <instance part="GND7" gate="1" x="25.4" y="71.12"/>
-<instance part="C2" gate="G$1" x="22.86" y="43.18"/>
 <instance part="TELEMETRY" gate="G$1" x="-10.16" y="104.14" rot="MR0"/>
 <instance part="PPM" gate="G$1" x="-7.62" y="55.88" smashed="yes"/>
 <instance part="VCC" gate="G$1" x="-7.62" y="53.34" smashed="yes"/>
@@ -4125,6 +4100,9 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <wire x1="127" y1="71.12" x2="127" y2="93.98" width="0.1524" layer="91"/>
 <junction x="127" y="93.98"/>
 <junction x="137.16" y="71.12"/>
+<pinref part="IC2" gate="G$1" pin="SDN"/>
+<wire x1="139.7" y1="73.66" x2="137.16" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="73.66" x2="137.16" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -4142,9 +4120,6 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <pinref part="C7" gate="G$1" pin="2"/>
 <wire x1="38.1" y1="40.64" x2="30.48" y2="40.64" width="0.1524" layer="91"/>
 <junction x="38.1" y="40.64"/>
-<pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="30.48" y1="40.64" x2="22.86" y2="40.64" width="0.1524" layer="91"/>
-<junction x="30.48" y="40.64"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -4210,21 +4185,6 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <wire x1="73.66" y1="111.76" x2="60.96" y2="111.76" width="0.1524" layer="91"/>
 <junction x="60.96" y="111.76"/>
 <junction x="73.66" y="111.76"/>
-</segment>
-</net>
-<net name="VCC" class="0">
-<segment>
-<pinref part="C7" gate="G$1" pin="1"/>
-<wire x1="30.48" y1="48.26" x2="30.48" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="SUPPLY4" gate="1" pin="VCC"/>
-<pinref part="C2" gate="G$1" pin="1"/>
-<wire x1="30.48" y1="48.26" x2="22.86" y2="48.26" width="0.1524" layer="91"/>
-<junction x="30.48" y="48.26"/>
-</segment>
-<segment>
-<pinref part="R8" gate="G$1" pin="2"/>
-<pinref part="SUPPLY5" gate="1" pin="VCC"/>
-<wire x1="106.68" y1="68.58" x2="106.68" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RXD" class="0">
@@ -4334,18 +4294,18 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <segment>
 <pinref part="IC2" gate="G$1" pin="TXANT"/>
 <wire x1="165.1" y1="76.2" x2="167.64" y2="76.2" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="76.2" x2="167.64" y2="71.12" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="GPIO0"/>
-<wire x1="167.64" y1="71.12" x2="165.1" y2="71.12" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="76.2" x2="167.64" y2="68.58" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GPIO1"/>
+<wire x1="167.64" y1="68.58" x2="165.1" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
 <pinref part="IC2" gate="G$1" pin="RXANT"/>
 <wire x1="165.1" y1="78.74" x2="170.18" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="78.74" x2="170.18" y2="68.58" width="0.1524" layer="91"/>
-<pinref part="IC2" gate="G$1" pin="GPIO1"/>
-<wire x1="170.18" y1="68.58" x2="165.1" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="78.74" x2="170.18" y2="71.12" width="0.1524" layer="91"/>
+<pinref part="IC2" gate="G$1" pin="GPIO0"/>
+<wire x1="170.18" y1="71.12" x2="165.1" y2="71.12" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RF_IRQ" class="0">
@@ -4439,18 +4399,6 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <wire x1="106.68" y1="35.56" x2="106.68" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="SDN" class="0">
-<segment>
-<pinref part="IC2" gate="G$1" pin="SDN"/>
-<wire x1="139.7" y1="73.66" x2="137.16" y2="73.66" width="0.1524" layer="91"/>
-<label x="132.08" y="73.66" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="U1" gate="G$1" pin="PD7(AIN1)"/>
-<wire x1="91.44" y1="50.8" x2="93.98" y2="50.8" width="0.1524" layer="91"/>
-<label x="93.98" y="50.8" size="1.778" layer="95"/>
-</segment>
-</net>
 <net name="PPM" class="0">
 <segment>
 <pinref part="PPM" gate="G$1" pin="P"/>
@@ -4526,6 +4474,16 @@ Source: http://ww1.microchip.com/downloads/en/DeviceDoc/22049b.pdf</description>
 <wire x1="73.66" y1="119.38" x2="81.28" y2="119.38" width="0.1524" layer="91"/>
 <junction x="73.66" y="119.38"/>
 <pinref part="C8" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="30.48" y1="48.26" x2="30.48" y2="50.8" width="0.1524" layer="91"/>
+<label x="30.48" y="50.8" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R8" gate="G$1" pin="2"/>
+<wire x1="106.68" y1="68.58" x2="106.68" y2="71.12" width="0.1524" layer="91"/>
+<label x="106.68" y="71.12" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
